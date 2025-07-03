@@ -70,8 +70,8 @@ The router just looks for keywords and routes accordingly. Simple!
 
 ## Tech Stack
 
-Frontend: React + ReactFlow (because it's pretty)  
-Backend: FastAPI + LangChain (because it works)
+Frontend: React + ReactFlow
+Backend: FastAPI + LangChain
 
 ## Want to contribute?
 
