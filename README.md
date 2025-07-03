@@ -5,7 +5,7 @@ Not only that, but becasue with n8n, you can't export your agent as an executabl
 
 ## What's this?
 
-It's basically like draw.io but for AI agents. You visually create conversation flows and the app generates the Python code for you. Pretty neat, right?
+It's basically like draw.io but for AI agents. You visually create conversation flows and the app generates the Python code for you.
 
 ## Watch the Demo
 
@@ -16,7 +16,7 @@ https://github.com/user-attachments/assets/80bfae95-e77a-47fe-b8b5-a86770c0831e
 
 ### What you'll need
 - Node.js & npm (for the UI)
-- Python 3.8+ (for the backend)
+- Python 3.11+ (for the backend)
 - An OpenAI API key
 
 ### Setting it up
