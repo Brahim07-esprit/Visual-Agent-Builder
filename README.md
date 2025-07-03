@@ -9,8 +9,7 @@ It's basically like draw.io but for AI agents. You visually create conversation 
 
 ## Watch the Demo
 
-https://github.com/user-attachments/assets/80bfae95-e77a-47fe-b8b5-a86770c0831e
-
+https://github.com/user-attachments/assets/07292c5b-36ad-40e7-84b1-4ec95939eb83
 
 ## Getting Started
 
