@@ -4,11 +4,31 @@ echo "Starting Agent Builder..."
 
 cleanup() {
     echo "Shutting down servers..."
+    # Kill by PID first
     kill $BACKEND_PID $FRONTEND_PID 2>/dev/null
+    
+    # Kill any remaining processes by name/port
+    pkill -f "react-scripts/scripts/start.js" 2>/dev/null
+    pkill -f "python main.py" 2>/dev/null
+    pkill -f "uvicorn" 2>/dev/null
+    
+    # Kill processes using ports 3000 and 8000
+    fuser -k 3000/tcp 2>/dev/null
+    fuser -k 8000/tcp 2>/dev/null
+    
     exit
 }
 
 trap cleanup EXIT INT TERM
+
+# Clean up any existing processes before starting
+echo "Cleaning up any existing processes..."
+pkill -f "react-scripts/scripts/start.js" 2>/dev/null
+pkill -f "python main.py" 2>/dev/null
+pkill -f "uvicorn" 2>/dev/null
+fuser -k 3000/tcp 2>/dev/null
+fuser -k 8000/tcp 2>/dev/null
+sleep 2
 
 echo "Starting backend server..."
 cd backend
@@ -23,9 +43,6 @@ if [ ! -d ".venv" ]; then
     fi
 fi
 
-echo "Activating virtual environment..."
-source .venv/bin/activate
-
 echo "Installing/updating dependencies..."
 uv add -r requirements.txt
 if [ $? -ne 0 ]; then
@@ -34,7 +51,6 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Dependencies installed successfully"
-sleep 2
 
 if [ ! -f ".env" ]; then
     echo "WARNING: No .env file found in backend directory!"
@@ -50,7 +66,8 @@ if [ ! -f ".env" ]; then
     fi
 fi
 
-python main.py &
+echo "Starting backend server..."
+.venv/bin/python main.py &
 BACKEND_PID=$!
 cd ..
 
@@ -69,6 +86,7 @@ FRONTEND_PID=$!
 echo ""
 echo "Agent Builder is running!"
 echo "Frontend: http://localhost:3000"
+echo "Backend: http://localhost:8000"
 echo ""
 echo "Press Ctrl+C to stop both servers"
 
