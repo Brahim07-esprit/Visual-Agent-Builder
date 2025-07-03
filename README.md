@@ -1,6 +1,7 @@
 # Visual Agent Builder 🚀
 
-Hey! I built this tool because I was tired of writing the same LangGraph boilerplate over and over. Now you can just drag, drop, and connect nodes to build AI agents - no coding needed!
+Hey! I built this tool because I was tired of writing the same LangGraph code over and over. Now you can just drag, drop, and connect nodes to build AI agents - no coding needed!
+Not only that, but becasue with n8n, you can't export your agent as an executable Python script.
 
 ## What's this?
 
