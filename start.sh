@@ -14,6 +14,8 @@ echo "Starting backend server..."
 cd backend
 
 echo "Checking backend dependencies..."
+uv init
+source .venv/bin/activate
 uv add -r requirements.txt
 
 if [ ! -f ".env" ]; then
