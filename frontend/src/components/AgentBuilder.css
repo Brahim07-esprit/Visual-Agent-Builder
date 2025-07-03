@@ -1,0 +1,181 @@
+.agent-builder {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.run-button,
+.export-button,
+.import-button,
+.export-json-button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.run-button {
+  background-color: #27ae60;
+  color: white;
+}
+
+.run-button:hover {
+  background-color: #229954;
+}
+
+.export-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.export-button:hover {
+  background-color: #2980b9;
+}
+
+.export-json-button {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.export-json-button:hover {
+  background-color: #7f8c8d;
+}
+
+.import-button {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.import-button:hover {
+  background-color: #8e44ad;
+}
+
+.builder-container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: white;
+  padding: 1.5rem;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.node-type {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  cursor: move;
+  transition: all 0.3s ease;
+}
+
+.node-type:hover {
+  border-color: #3498db;
+  background-color: #e3f2fd;
+}
+
+.node-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 4px;
+}
+
+.node-icon.regular {
+  background-color: #e8f5e9;
+}
+
+.node-icon.router {
+  background-color: #fff3e0;
+}
+
+.instructions {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.instructions h4 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.instructions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.instructions li {
+  padding: 0.25rem 0;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.instructions li:before {
+  content: "• ";
+  color: #3498db;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.flow-container {
+  flex: 1;
+  background-color: #fafafa;
+}
+
+/* React Flow overrides */
+.react-flow__node-input,
+.react-flow__node-output {
+  border-radius: 8px;
+  border: 2px solid #333;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  background-color: #555;
+  border: 2px solid #fff;
+}

@@ -1,0 +1,67 @@
+.agent-node {
+  min-width: 180px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.agent-node:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-color: #3498db;
+}
+
+.agent-node.router {
+  border-color: #f39c12;
+}
+
+.agent-node.router:hover {
+  border-color: #e67e22;
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  border-radius: 6px 6px 0 0;
+}
+
+.agent-node.router .node-header {
+  background-color: #fff8e1;
+}
+
+.node-type-icon {
+  font-size: 1.2rem;
+}
+
+.node-label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.node-content {
+  padding: 0.75rem;
+}
+
+.node-prompt {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.routing-info {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #f39c12;
+  font-weight: 500;
+}

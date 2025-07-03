@@ -1,0 +1,14 @@
+langgraph
+langchain
+langchain_tavily
+langchain-openai
+langsmith
+
+python-dotenv
+
+fastapi
+uvicorn
+pydantic
+python-multipart
+cors
+fastapi-cors
