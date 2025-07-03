@@ -25,8 +25,9 @@ https://github.com/user-attachments/assets/80bfae95-e77a-47fe-b8b5-a86770c0831e
 ```bash
 cd agent-builder/backend
 echo "OPENAI_API_KEY=your-key-here" > .env
-pip install -r requirements.txt
-python main.py
+uv init
+source .venv/bin/activate
+uv add -r requirements.txt
 ```
 
 2. **Then the frontend:**
@@ -36,7 +37,7 @@ npm install
 npm start
 ```
 
-Or just run `./start.sh` from the agent-builder folder if you're feeling lazy like me 😄
+Or just run `./start.sh` from the agent-builder folder if you're feeling lazy 😄
 
 ## How to use it
 
